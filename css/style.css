@@ -349,58 +349,52 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        width: 30px; 
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: auto; 
+    }
+
+    .navegacion-principal {
+        display: none;
+    }
+
+    .menu {
+        display: flex; 
+        position: fixed;
+        top: 75px; 
+        left: 0;
+        width: 100%;
+        max-height: 0; 
+        overflow: hidden; 
+        background-color: #1a1a1a;
+        flex-direction: column;
+        align-items: center;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .menu.activo {
+        max-height: 300px;
+        background-color: #1a1a1a; 
+    }
+
     .contenedor-mision-vision {
         flex-direction: column;
         align-items: center;
     }
-
     .card-mision,
     .card-vision {
         width: 90%;
         max-width: 400px;
     }
+}
 
-    #mision-vision {
-        padding: 40px 15px;
-    }
-
-    #mision-vision h3 {
-        font-size: 1.5em;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navegacion-principal {
-        padding: 10px 5%;
-    }
-
-    .menu {
-        position: fixed;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        height: 0; 
-        background-color: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden; 
-        transition: height 0.3s ease-in-out;
-    }
-
-    .menu.activo {
-        height: 150px;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-        padding: 5px 0;
-    }
-
-    .menu li a {
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+.linea {
+    display: block; 
+    width: 100%; 
+    height: 3px; 
+    background-color: #FFF; 
 }
