@@ -1,0 +1,406 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+header {
+    display: flex;
+    align-items: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; 
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+
+.navegacion-principal {
+    max-width: 1200px;
+    margin-left: auto;
+    padding: 10px 5%;
+}
+
+.logo-y-titulo {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+#titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    display: block;
+}
+
+.menu a:hover {
+    color: rgba(82, 16, 144, 0.618);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 5px;
+    z-index: 1001; 
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white; 
+    transition: all 0.3s ease-in-out;
+}
+
+.seccion-carrusel-imagen-grande {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 40px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrusel-imagen-principal {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.diapositiva-grande {
+    display: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.diapositiva-grande img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-height: 600px;
+}
+
+.desvanecer {
+    animation-name: desvanecer;
+    animation-duration: 1.5s;
+}
+
+@keyframes desvanecer {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.carousel-wrapper {
+    max-width: 1000px; 
+    margin: 20px auto; 
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    scroll-behavior: smooth; 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: max-content;
+    padding: 0 10px;
+}
+
+.card {
+    width: 350px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+.hover-img {
+    opacity: 0;
+}
+
+.card:hover .default-img {
+    opacity: 0;
+}
+
+.card:hover .hover-img {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+#seccion {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#mision-vision {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    color: #000000;
+}
+
+.contenedor-mision-vision {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-mision,
+.card-vision {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+#mision-vision h3 {
+    font-size: 1.8em;
+    color: #530873;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#mision-vision p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #000000;
+}
+
+
+#contacto {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.contenedor-contacto {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.formulario-ropa {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.formulario-ropa input[type="text"],
+.formulario-ropa input[type="email"],
+.formulario-ropa input[type="tel"],
+.formulario-ropa textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario-ropa textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formulario-ropa button {
+    background-color: #530873;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-ropa button:hover {
+    background-color: #37044d;
+}
+
+.politica-privacidad {
+    text-align: left;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.politica-privacidad a {
+    color: black;
+    text-decoration: none;
+}
+
+.info-adicional {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+}
+
+.info-adicional h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-adicional p {
+    margin: 5px 0;
+}
+
+.info-adicional a {
+    color: black;
+    text-decoration: none;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contenedor-mision-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-mision,
+    .card-vision {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    #mision-vision {
+        padding: 40px 15px;
+    }
+
+    #mision-vision h3 {
+        font-size: 1.5em;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navegacion-principal {
+        padding: 10px 5%;
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        height: 0; 
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; 
+        transition: height 0.3s ease-in-out;
+    }
+
+    .menu.activo {
+        height: 150px;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .menu li a {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
