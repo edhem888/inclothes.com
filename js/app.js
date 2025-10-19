@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navItems.forEach(item => {
         item.addEventListener('click', () => {
-            if (navMenu.classList.contains('activo')) {
+            if (navMenu && navMenu.classList.contains('activo')) {
                 navMenu.classList.remove('activo');
             }
         });
