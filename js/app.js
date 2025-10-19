@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.menu'); 
+    const navItems = document.querySelectorAll('.menu a'); 
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('activo'); 
+        });
+    }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (navMenu.classList.contains('activo')) {
+                navMenu.classList.remove('activo');
+            }
+        });
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const diapositivasGrandes = document.querySelectorAll('.diapositiva-grande');
     let indiceDiapositivaGrande = 0;
@@ -33,23 +53,4 @@ document.addEventListener("DOMContentLoaded", () => {
         iniciarAutoPlayGrande();
     }
     
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.menu');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('activo');
-        });
-    }
-
-    const allLinks = document.querySelectorAll('.menu a');
-    allLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('activo')) {
-                navLinks.classList.remove('activo');
-            }
-        });
-    });
 });
