@@ -342,7 +342,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-
+    
     *, *::before, *::after {
         box-sizing: border-box;
         margin-left: 0 !important;
@@ -359,6 +359,15 @@ footer {
         padding-left: 0;
         padding-right: 0;
     }
+    
+    header {
+        padding: 0 10px; 
+    }
+    
+    #mision-vision, #contacto {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     .menu-toggle {
         display: flex;
@@ -370,8 +379,8 @@ footer {
     }
 
     .menuhamburguesa {
-        width: 30px !important; 
-        height: 30px !important; 
+        width: 90px !important; 
+        height: 90px !important; 
         object-fit: contain;
     }
 
@@ -383,28 +392,31 @@ footer {
         width: 100vw !important; 
         max-height: 0; 
         overflow: hidden;
-        display: flex; 
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
         position: fixed;
-        top: 80px;
+        top: 40px; 
         left: 0;
-        
         background-color: #1a1a1a !important; 
-        z-index: 999999 !important;
-        
+        z-index: 999999 !important; 
         flex-direction: column;
         align-items: center;
         transition: max-height 0.3s ease-in-out;
     }
     
     .menu li {
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.9); 
-}
+        width: 100%;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: rgba(0, 0, 0, 0.9); 
+    }
     .menu li a {
-        color: #FFFFFF !important; 
+        color: rgb(255, 255, 255) !important; 
         padding: 10px 0;
-        display: block;
+        display: block !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -415,7 +427,7 @@ footer {
     .contenedor-mision-vision {
         flex-direction: column;
         align-items: center;
-        padding: 0 15px;
+        padding: 0 15px; 
     }
     .card-mision,
     .card-vision {
